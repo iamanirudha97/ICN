@@ -1,0 +1,51 @@
+.product-list{
+    max-width: 1100px;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: rgb(233, 230, 238);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(163, 157, 173);
+
+}
+
+.product-img{ 
+    margin: 15px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    width: 250px;
+}
+
+.product-description{
+    margin-top: 15px;
+    width: 400px;
+    margin-right: 0px;
+    margin-left: 30px;
+}
+
+.product-description > p {
+    margin-top: 10px;
+
+}
+
+.product-price{
+    margin-top: 15px;
+    width: 180px;
+    margin-left: 250px;
+}
+
+.product-price > p{
+    margin-top: 10px;
+}
+
+.product-list a {
+    padding: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+  }

@@ -1,0 +1,10 @@
+check about query id (wrap parameter) on routes of app component
+
+https://www.youtube.com/watch?v=pa1e4yx_Ha8
+socket io
+
+contact us, about us, route guards, filters 
+
+check on shivani's update  about i20 doc category -> deferral of admission
+ask for freshly dated bank statement from dad - > will get tomorrow
+bank loan statement --> pending

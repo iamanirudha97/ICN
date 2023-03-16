@@ -1,0 +1,85 @@
+.product-details{
+    background-color: rgb(233, 230, 238);
+    box-shadow: 2px 2px 5px rgb(163, 157, 173);
+    border-radius: 5px;
+    max-width:1200px;   
+    margin-bottom: 150px; 
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-image{
+    width: 600px;
+    height: 475px;
+    margin: 20px;
+}
+
+.information{
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.information > h2{
+    margin-bottom: 60px;
+}
+
+.bottom{  
+    margin: 50px;
+    text-align: center;    
+}
+
+.product-description{
+    margin-bottom: 50px;
+}
+
+.btn{
+    display: block;
+    padding: 15px 32px;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* project comments */
+.product-comments label {
+    margin-bottom: 0px;
+  }
+  .product-comments textarea {
+    min-height: 40px;
+    font-size: 1.5em;
+  }
+
+  /* comment list */
+.product-comments h4 {
+    color: var(--heading-color);
+    padding: 15px;
+  }
+  .product-comments li {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #f2f2f2;
+    margin-top: 20px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+    background: #fff;
+  }
+  .comment-author {
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+  }
+  .comment-author .avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .comment-date {
+    color: var(--text-color);
+    font-size: 0.9em;
+    margin: 4px 0 10px;
+  }
+  .comment-content {
+    color: var(--text-color);
+    font-size: 0.9em;
+  }
