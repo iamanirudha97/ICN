@@ -1,0 +1,39 @@
+.contact-us{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-us-form {
+    max-width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .contact-us-form input {
+    margin-bottom: 15px;
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+  }
+
+  .container{
+    text-align: center;
+  }
+
+
+  .form-btn{
+    margin-top: 10px;
+    max-width: 20%;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white !important;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    align-self: flex-end;
+    border-bottom-left-radius: 2% ;
+    border-bottom-right-radius: 2% ;
+  }
