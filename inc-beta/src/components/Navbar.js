@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 //styles and svg files
 import './Navbar.css'
-import Temple from '../assets/temple.svg'
+import Temple from '../assets/ICN.svg'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext'
 
