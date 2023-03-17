@@ -20,6 +20,7 @@ import Dashboard from './pages/dashboard/Dashboard';
 import ProductDetails from './pages/productDetails/ProductDetails';
 import Cart from './pages/cart/Cart';
 import Success from './pages/cart/Success';
+import Canceled from './pages/cart/Canceled';
 
 
 function App() {
@@ -81,8 +82,13 @@ function App() {
                 </Route>
 
                 <Route path='/success'> 
-                  {!user && <Signup />}
+                  {!user && <Login />}
                   {user && <Success />}                   
+                </Route>
+
+                <Route path='/canceled'> 
+                  {!user && <Login />}
+                  {user && <Canceled />}                   
                 </Route>
 
 
