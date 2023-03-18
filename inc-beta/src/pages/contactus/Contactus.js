@@ -18,7 +18,7 @@ export default function Contactus() {
       </div>
       
 
-      <div className="container">
+      <div className="form-container">
         <form action="https://formspree.io/f/xbjekvvo" method="POST" className='contact-us-form'>
           <input 
             type="text"

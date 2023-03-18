@@ -4,6 +4,7 @@ import { useDocument } from '../../hooks/useDocument'
 import ProductComments from './ProductComments'
 import { useFirestore } from '../../hooks/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
+import { projectFirestore } from '../../firebase/config'
 
 export default function ProductDetails() {
     const { id } = useParams()
@@ -23,6 +24,15 @@ export default function ProductDetails() {
         deleteDocument(document.id)
     }
 
+ let Product = document
+    const handleClick = () => {
+      Product['qty'] = 1
+      Product['TotalProductPrice'] = Product.qty * Product.price
+      projectFirestore.collection('Cart ' + user.uid).doc(document.id).set(Product).then(() => {
+        console.log('successfully added to cart', user.uid, document.id)
+      })    
+    }
+    
 
   return (
     <div className='product-details'>
@@ -40,7 +50,7 @@ export default function ProductDetails() {
         
         <div className='bottom'>
             <p className='product-description'> {document.desc} </p>
-            <button className="btn">Buy</button>
+            <button className="btn" onClick={handleClick}>Buy</button>
         </div>
         
         < ProductComments product={document} />

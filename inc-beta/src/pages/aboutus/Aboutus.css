@@ -1,3 +1,25 @@
+.company-desc p {
+  margin-bottom: 30px;
+  box-shadow: (0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.project-guide{
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  /* justify-content: center; */
+  /* align-items: stretch; */
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.members-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
+
+}
+
 .card{
     margin-top: 3rem;
     padding: 2rem 2rem 2rem 2rem !important;
@@ -12,6 +34,7 @@
     height: 200px;
     width: 200px;
     padding: 1px;
+    object-fit: cover
    }
  
    
@@ -49,6 +72,7 @@
    
    .icon-list{
     list-style: none;
+    display: flex;
     padding-left: 0px;
    }
    

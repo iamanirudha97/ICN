@@ -4,6 +4,7 @@ import { useAuthContext } from '../../hooks/useAuthContext'
 import { v4 as uuidv4 } from "uuid"
 import { useFirestore } from '../../hooks/useFirestore'
 import Avatar from '../../components/Avatar'
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 export default function ProductComments( {product} ) {
   const [newComment, setNewComment ] = useState('')
@@ -39,7 +40,7 @@ export default function ProductComments( {product} ) {
               <p>{comment.displayName}</p>
             </div>
             <div className="comment-date">
-              <p> Date here: </p>
+              <p> {formatDistanceToNow(comment.createdAt.toDate(), { addSuffix: true })} </p>
             </div>
             <div className="content">
               <p>{comment.content}</p>
