@@ -2,7 +2,6 @@
 import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css'
 //pages
-import Landing from './pages/landing/Landing';
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
@@ -37,9 +36,9 @@ function App() {
             <Navbar />       
 
               <Switch>
-                <Route exact path='/'>
+                {/* <Route exact path='/'>
                   <Landing />
-                </Route>
+                </Route> */}
 
 
                 <Route path='/home'>
@@ -76,7 +75,7 @@ function App() {
                 </Route>
 
 
-                <Route path='/signup'> 
+                <Route path='/'> 
                   {!user && <Signup />}
                   {user && <Redirect to='/home'/>}                   
                 </Route>

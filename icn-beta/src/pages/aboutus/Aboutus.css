@@ -3,6 +3,10 @@
   box-shadow: (0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.aboutUs-desc p{
+  margin-bottom: 30px;
+}
+
 .project-guide{
   flex-direction: column;
   display: flex;
@@ -156,4 +160,19 @@
       font-size: 20px;
      }
    
+   }
+
+   .company-desc{
+    margin-top: 50px;
+    margin-bottom: 85px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px    
+   }
+
+   .aboutUs-desc{
+    margin-bottom: 35px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
    }
