@@ -4,6 +4,7 @@ import Select from 'react-select'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { useCreate } from './useCreate'
 import {useFirestore} from '../../hooks/useFirestore'
+import { useHistory } from 'react-router-dom'
 
 //category
 const categories = [
@@ -32,6 +33,8 @@ export default function Create() {
   
   const [imageError, setImageError] = useState(null)
   const [formError, setFormError] = useState(null)
+
+  const history = useHistory()
 
 
   const handleFileChange = (e) => {
@@ -94,8 +97,9 @@ export default function Create() {
         productImage: url
     }
 
-    addDocument(product) 
-        
+    await addDocument(product) 
+    history.push('/dashboard')
+            
  }  
 
   return (

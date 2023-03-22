@@ -16,7 +16,6 @@ export default function Sidebar() {
 
     const { user } = useAuthContext()
     const { currentUserRole } = useGetUserRole()
-    console.log('current user is', currentUserRole)
 
   return (
     <div className='sidebar'>

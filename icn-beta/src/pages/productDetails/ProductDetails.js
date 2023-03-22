@@ -5,12 +5,14 @@ import ProductComments from './ProductComments'
 import { useFirestore } from '../../hooks/useFirestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { projectFirestore } from '../../firebase/config'
+import { useGetUserRole } from '../../hooks/useGetUserRole'
 
 export default function ProductDetails() {
     const { id } = useParams()
     const { error, document } = useDocument('products', id)
     const { deleteDocument } = useFirestore('products')
     const { user } = useAuthContext()
+    const { currentUserRole } = useGetUserRole()
 
     if(error){
         return <div className="error"> {error} </div>
@@ -44,13 +46,19 @@ export default function ProductDetails() {
                 <h4> Company Name : {document.companyName}</h4>
                 <h6> Address : {document.companyAddress}</h6>
                 <h5> GST : {document.gst}</h5>
-                <button className="btn">Bid for the product </button>
+                {currentUserRole === 'Consumer' && (
+              <button className="btn" > Bid for the product </button>
+            )}
             </div>
         </div>
         
         <div className='bottom'>
             <p className='product-description'> {document.desc} </p>
-            <button className="btn" onClick={handleClick}>Buy</button>
+
+            {currentUserRole === 'Consumer' && 
+              <button className="btn" onClick={handleClick}>Buy</button>
+            }
+            
         </div>
         
         < ProductComments product={document} />
