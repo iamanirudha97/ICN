@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import './App.css'
 //pages
+// import Landing from './pages/landing/Landing'
 import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
@@ -75,7 +76,7 @@ function App() {
                 </Route>
 
 
-                <Route path='/'> 
+                <Route path='/signup'> 
                   {!user && <Signup />}
                   {user && <Redirect to='/home'/>}                   
                 </Route>
@@ -91,10 +92,16 @@ function App() {
                 </Route>
 
 
-                <Route path='/contactus'> <Contactus /> </Route>
+                <Route path='/contactus'> 
+                  {!user && <Contactus />}
+                  {user && <Contactus />}
+                 </Route>
 
 
-                <Route path='/aboutus'> <Aboutus /> </Route>
+                <Route path='/aboutus'> 
+                  {!user && <Aboutus />}
+                  {user && <Aboutus />}
+                </Route>
                 
               </Switch>
           </div>
