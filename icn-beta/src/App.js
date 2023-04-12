@@ -21,6 +21,7 @@ import ProductDetails from './pages/productDetails/ProductDetails';
 import Cart from './pages/cart/Cart';
 import Success from './pages/cart/Success';
 import Canceled from './pages/cart/Canceled';
+import Review from './pages/review/Review';
 
 
 function App() {
@@ -101,6 +102,11 @@ function App() {
                 <Route path='/aboutus'> 
                   {!user && <Aboutus />}
                   {user && <Aboutus />}
+                </Route>
+
+                <Route path='/review'> 
+                  {!user && <Review />}
+                  {user && <Review />}
                 </Route>
                 
               </Switch>

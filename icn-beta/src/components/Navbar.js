@@ -25,10 +25,13 @@ export default function Navbar() {
                 <li> <Link to='/login'> Login </Link> </li>
                 <li> <Link to='/signup'> Signup </Link> </li>
               </>
-            )}           
+            )} 
 
+                    
+            <li> <Link to='/review'> Rate us </Link></li>
             <li> <Link to='/contactus'> Contact us </Link> </li>
             <li> <Link to='/aboutus'> About us </Link> </li>
+           
             
             {user && (
               <>
